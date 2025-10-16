@@ -1,21 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
+    <title>Calculadora Simples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f3f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .calc {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 300px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .operador {
+            font-size: 24px;
+            margin: 10px 0;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-    <h1>Calculadora</h1>
+    <div class="calc">
+        <h1>Calculadora</h1>
+        <form action="./soma.html" method="post">
+            <label for="num1">Digite o primeiro número:</label>
+            <input type="number" id="num1" name="num1" required>
 
-    <form action="./soma.html" method="post">
-        <label for="nome">Digíte o primerio   número</label>
-        <input type="number" name="" id="">
-        <p>+</p>
-        <label for="num2">Digíte o segundo número</label>
-        <input type="number" name="" id="">
-        <br>
-        <BUtton>SOMAR</BUtton>
-    </form>
+            <div class="operador">+</div>
+
+            <label for="num2">Digite o segundo número:</label>
+            <input type="number" id="num2" name="num2" required>
+
+            <button type="submit">Somar</button>
+        </form>
+    </div>
 </body>
 </html>
